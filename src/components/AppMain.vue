@@ -35,14 +35,23 @@ export default {
           <h1>Projects List:</h1>
         </div>
 
-        <div class="col-12">
-          <div class="card">
-            <img src="" class="card-img-top" alt="" />
+        <div class="col-12 text-center">
+          <div
+            class="card mb-4 p-3"
+            v-for="singleProject in projectsList"
+            :key="singleProject.id"
+          >
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h3 class="card-title">{{ singleProject.title }}</h3>
+              <span class="card-title badge text-bg-warning">{{
+                singleProject.type.name
+              }}</span>
+              <a href="{{ singleProject.url }}">
+                <h6 class="card-title">{{ singleProject.url }}</h6>
+              </a>
+              <h4 class="card-title">{{ singleProject.technologies.name }}</h4>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                {{ singleProject.content }}
               </p>
             </div>
           </div>
@@ -55,5 +64,8 @@ export default {
 <style scoped>
 h1 {
   color: black;
+}
+a {
+  color: red;
 }
 </style>
