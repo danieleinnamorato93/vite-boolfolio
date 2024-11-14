@@ -1,17 +1,16 @@
 <script>
 export default {
   data() {
-    return {
-      
-    }
-  }
-}
+    return {};
+  },
+};
 </script>
 
 <template>
-
+  <h1>Titolo</h1>
 </template>
 
-<style lang="scss" scoped>
-@use"./style/general.scss" as *;
+<style lang="scss">
+@use "bootstrap/scss/bootstrap.scss" as *;
+@use "./style/general.scss" as *;
 </style>
