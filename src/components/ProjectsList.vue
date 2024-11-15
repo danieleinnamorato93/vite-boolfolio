@@ -1,7 +1,9 @@
 <script>
 import axios from "axios";
+import ProjectsListCard from "./ProjectsListCard.vue";
 export default {
   name: "ProjectsList",
+  components: { ProjectsListCard },
   data() {
     return {
       projectsList: [],
@@ -28,37 +30,13 @@ export default {
 </script>
 
 <template>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Projects List:</h1>
-        </div>
-
-        <div class="col-12 text-center">
-          <div
-            class="card bg-primary mb-4 p-3"
-            v-for="singleProject in projectsList"
-            :key="singleProject.id"
-          >
-            <div class="card-body">
-              <h3 class="card-title">{{ singleProject.title }}</h3>
-              <span class="card-title badge text-bg-warning">{{
-                singleProject.type.name
-              }}</span>
-              <a href="{{ singleProject.url }}">
-                <h6 class="card-title">{{ singleProject.url }}</h6>
-              </a>
-              <h4 class="card-title">{{ singleProject.technologies.name }}</h4>
-              <p class="card-text">
-                {{ singleProject.content }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+  <div class="col-12 text-center">
+    <ProjectsListCard
+      v-for="singleProject in projectsList"
+      :key="singleProject.id"
+      :singleProjectObject="singleProject"
+    />
+  </div>
 </template>
 
 <style scoped>

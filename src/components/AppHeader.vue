@@ -29,7 +29,7 @@ export default {
           <div class="navbar-nav">
             <li class="me-3">
               <router-link
-                class="nav-link active icon-link-hover link-danger"
+                class="nav-link icon-link-hover link-danger"
                 :to="{ name: 'home' }"
                 >Homepage</router-link
               >
@@ -37,6 +37,13 @@ export default {
             <li class="me-3">
               <router-link class="nav-link link-danger" :to="{ name: 'about' }"
                 >About</router-link
+              >
+            </li>
+            <li class="me-3">
+              <router-link
+                class="nav-link link-danger"
+                :to="{ name: 'projects' }"
+                >Projects</router-link
               >
             </li>
           </div>

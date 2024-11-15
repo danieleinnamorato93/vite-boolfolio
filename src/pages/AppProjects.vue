@@ -1,28 +1,15 @@
 <script>
-import axios from "axios";
+import ProjectsList from "../components/ProjectsList.vue";
+
 export default {
-  name: "AppMain",
+  name: "AppProjects",
   data() {
-    return {
-      projectsList: [],
-      apiUrl: "http://127.0.0.1:8000/api/projects",
-    };
+    return {};
   },
-  methods: {
-    getProjects() {
-      axios
-        .get(this.apiUrl)
-        .then((response) => {
-          console.log(response.data.results);
-          this.projectsList = response.data.results;
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    },
-  },
-  created() {
-    this.getProjects();
+  methods: {},
+  created: {},
+  components: {
+    ProjectsList,
   },
 };
 </script>
@@ -34,28 +21,7 @@ export default {
         <div class="col-12">
           <h1>Projects List:</h1>
         </div>
-
-        <div class="col-12 text-center">
-          <div
-            class="card bg-primary mb-4 p-3"
-            v-for="singleProject in projectsList"
-            :key="singleProject.id"
-          >
-            <div class="card-body">
-              <h3 class="card-title">{{ singleProject.title }}</h3>
-              <span class="card-title badge text-bg-warning">{{
-                singleProject.type.name
-              }}</span>
-              <a href="{{ singleProject.url }}">
-                <h6 class="card-title">{{ singleProject.url }}</h6>
-              </a>
-              <h4 class="card-title">{{ singleProject.technologies.name }}</h4>
-              <p class="card-text">
-                {{ singleProject.content }}
-              </p>
-            </div>
-          </div>
-        </div>
+        <ProjectsList />
       </div>
     </div>
   </main>
