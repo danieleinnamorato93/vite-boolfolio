@@ -20,18 +20,7 @@ export default {
         </div>
 
         <div class="col-12 text-center">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-            voluptates. Obcaecati, ratione eaque. Aspernatur, sint officia. Aut
-            qui maiores, tempora id ipsa tenetur asperiores possimus ratione
-            esse, nulla fugiat facilis! Ducimus eaque rerum officiis, expedita
-            ex, consequuntur ea incidunt harum sit adipisci laborum, molestias
-            alias vel aperiam error nisi sunt sint? Quis rem necessitatibus
-            ipsum quasi itaque, doloremque tempora? Quam. Aliquam veniam facere
-            modi nemo, facilis dignissimos vel officia eligendi ratione quae sit
-            adipisci laborum, repellat reprehenderit totam sint magnam. Quis
-            accusantium ex cum ducimus id nesciunt esse blanditiis sunt.
-          </p>
+          <h2>Homepage</h2>
         </div>
       </div>
     </div>
@@ -39,9 +28,11 @@ export default {
 </template>
 
 <style scoped>
-h1 {
-  color: black;
+h1,
+h2 {
+  color: rgb(255, 255, 255);
 }
+
 a {
   color: red;
 }

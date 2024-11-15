@@ -1,4 +1,6 @@
 <script>
+import { RouterLink } from "vue-router";
+
 export default {
   name: "AppHeader",
   data() {
@@ -9,9 +11,9 @@ export default {
 
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand link-danger" href="#">NavDan</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,10 +27,18 @@ export default {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link" href="#">Pricing</a>
+            <li class="me-3">
+              <router-link
+                class="nav-link active icon-link-hover link-danger"
+                :to="{ name: 'home' }"
+                >Homepage</router-link
+              >
+            </li>
+            <li class="me-3">
+              <router-link class="nav-link link-danger" :to="{ name: 'about' }"
+                >About</router-link
+              >
+            </li>
           </div>
         </div>
       </div>
@@ -36,4 +46,8 @@ export default {
   </header>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+router-link {
+  color: black;
+}
+</style>
