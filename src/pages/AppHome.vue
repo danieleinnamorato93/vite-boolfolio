@@ -2,19 +2,13 @@
 export default {
   name: "AppHome",
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
-    getProjects() {
-
+    getProjects() {},
   },
-  created() {
-
-  },
+  created() {},
 };
-}
 </script>
 
 <template>

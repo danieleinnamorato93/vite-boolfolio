@@ -2,19 +2,13 @@
 export default {
   name: "AppAbout",
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
-    getProjects() {
-
-  },
-  created() {
-
+    getProjects() {},
+    created() {},
   },
 };
-}
 </script>
 
 <template>
