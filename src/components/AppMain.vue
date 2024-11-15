@@ -37,7 +37,7 @@ export default {
 
         <div class="col-12 text-center">
           <div
-            class="card mb-4 p-3"
+            class="card bg-primary mb-4 p-3"
             v-for="singleProject in projectsList"
             :key="singleProject.id"
           >
