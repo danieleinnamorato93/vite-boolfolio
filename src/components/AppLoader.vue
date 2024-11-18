@@ -8,7 +8,9 @@ export default {
 </script>
 
 <template>
-  <div class="loader my-3"></div>
+  <section class="single-loader d-flex py-5">
+    <div class="loader m-auto"></div>
+  </section>
 </template>
 
 <style scoped lang="scss">
