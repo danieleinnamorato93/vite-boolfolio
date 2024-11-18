@@ -23,7 +23,7 @@ export default {
   background: conic-gradient(
       from 146deg at 50% 1%,
       #0000,
-      #91492a 2deg 65deg,
+      #ec0000 2deg 65deg,
       #0000 68deg
     ) -5% 100%/20% 27% repeat-x;
 }
@@ -50,7 +50,7 @@ export default {
     88.3% 17.86%,
     78.19% 39.74%
   );
-  background: #cf6f46;
+  background: #9e2622;
   animation: l7 3s linear infinite;
   translate: -135% 0;
 }
