@@ -12,10 +12,11 @@ export default {
   },
   methods: {
     getProjects() {
+      console.log("avvio chiamata");
       axios
         .get(this.apiUrl)
         .then((response) => {
-          console.log(response.data.results);
+          console.log("dati ottenuti", response.data.results);
           this.projectsList = response.data.results;
         })
         .catch(function (error) {
