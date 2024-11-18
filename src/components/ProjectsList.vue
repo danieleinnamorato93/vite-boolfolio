@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       projectsList: [],
-      apiUrl: "http://127.0.0.1:8000/api/projects",
+      apiUrl: "http://127.0.0.1:8000/api/projectss",
       loaded: false,
     };
   },
