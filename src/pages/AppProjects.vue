@@ -7,7 +7,9 @@ export default {
     return {};
   },
   methods: {},
-  created: {},
+  created() {
+    console.log("app projects caricato");
+  },
   components: {
     ProjectsList,
   },
