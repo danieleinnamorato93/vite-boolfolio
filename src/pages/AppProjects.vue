@@ -29,9 +29,9 @@ export default {
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h1 {
-  color: black;
+  color: white;
 }
 a {
   color: red;

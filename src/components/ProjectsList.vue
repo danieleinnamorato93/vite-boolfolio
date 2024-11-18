@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       projectsList: [],
-      apiUrl: "http://127.0.0.1:8000/api/projectss",
+      apiUrl: "http://127.0.0.1:8000/api/projects",
       loaded: false,
     };
   },
@@ -48,11 +48,8 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h1 {
-  color: black;
-}
-a {
-  color: red;
+  color: white;
 }
 </style>
