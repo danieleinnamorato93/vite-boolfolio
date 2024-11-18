@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <article class="card bg-primary mb-4 p-3">
+  <article class="card bg-primary mb-4 p-5">
     <div class="card-body">
       <h2 class="card-title">{{ singleProjectObject.title }}</h2>
       <span class="card-title badge text-bg-warning">{{
@@ -31,4 +31,8 @@ export default {
   </article>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+a {
+  color: white;
+}
+</style>
