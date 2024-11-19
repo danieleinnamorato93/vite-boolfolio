@@ -40,7 +40,8 @@ export default {
 </script>
 
 <template>
-  <ProjectsListCard :singleProjectObject="singleProject" />
+  <ProjectsListCard :singleProjectObject="singleProject" v-if="loaded" />
+  <AppLoader v-else />
   <!--<p>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, ipsam vero.
     Facilis quos facere consectetur velit, natus vitae pariatur perspiciatis,
