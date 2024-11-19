@@ -40,10 +40,8 @@ export default {
 </script>
 
 <template>
-  <!--<ProjectsListCard />-->
-  <h2>Single Project Page ID:{{ $route.params.id }}</h2>
-
-  <p>
+  <ProjectsListCard :singleProjectObject="singleProject" />
+  <!--<p>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, ipsam vero.
     Facilis quos facere consectetur velit, natus vitae pariatur perspiciatis,
     ipsum alias repudiandae incidunt fugit laborum, aperiam reprehenderit
@@ -137,7 +135,7 @@ export default {
     nostrum hic debitis optio, nam molestiae voluptatum quisquam accusamus
     excepturi, temporibus saepe. Commodi quas totam laboriosam iste unde animi
     omnis distinctio!
-  </p>
+  </p>-->
 </template>
 
 <style scoped lang="scss">
