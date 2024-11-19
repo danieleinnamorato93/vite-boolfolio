@@ -113,4 +113,11 @@ export default {
   </p>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+h2 {
+  color: red;
+}
+p {
+  color: white;
+}
+</style>
