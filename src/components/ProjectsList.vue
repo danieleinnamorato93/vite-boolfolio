@@ -27,6 +27,9 @@ export default {
           console.log(error);
         });
     },
+    show(postId) {
+      this.$router.push({ name: "projects.show", params: { id: postId } });
+    },
   },
   created() {
     this.getProjects();
@@ -40,11 +43,16 @@ export default {
   </section>
 
   <div class="col-12 text-center" v-else>
-    <ProjectsListCard
+    <router-link
       v-for="singleProject in projectsList"
       :key="singleProject.id"
-      :singleProjectObject="singleProject"
-    />
+      :to="{ name: 'projects.show', params: { id: singleProject.id } }"
+    >
+      <ProjectsListCard
+        :singleProjectObject="singleProject"
+        @click="show(singleProject.id)"
+      />
+    </router-link>
   </div>
 </template>
 
