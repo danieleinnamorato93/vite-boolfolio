@@ -8,6 +8,11 @@ const routes = [
   { path: "/", component: AppHome, name: "home" },
   { path: "/about", component: AppAbout, name: "about" },
   { path: "/projects", component: AppProjects, name: "projects" },
+  {
+    path: "/projects/:id",
+    component: AppSingleProjects,
+    name: "projects.show",
+  },
 ];
 
 const router = createRouter({
