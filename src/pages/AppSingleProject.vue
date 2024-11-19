@@ -14,7 +14,7 @@ export default {
 
 <template>
   <!--<ProjectsListCard />-->
-  <h2>Single Project Page:</h2>
+  <h2>Single Project Page ID:{{ $route.params.id }}</h2>
 
   <p>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, ipsam vero.
