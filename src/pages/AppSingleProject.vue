@@ -1,14 +1,41 @@
 <script>
 import ProjectsListCard from "../components/ProjectsListCard.vue";
+import AppLoader from "../components/AppLoader.vue";
+import axios from "axios";
 
 export default {
   data() {
     return {
-      singleProject: {},
+      singleProject: null,
+      apiUrl: "http://127.0.0.1:8000/api/projects",
     };
   },
   name: "AppSingleProject",
-  components: "ProjectsListCard",
+  components: { ProjectsListCard, AppLoader },
+  methods: {
+    getSingleProject() {
+      console.log("ID passato:", this.$route.params.id);
+      axios
+        .get(`${this.apiUrl}/${this.$route.params.id}`)
+        .then((response) => {
+          console.log(response.data.results);
+          this.singleProject = response.data.results;
+          this.loaded = true;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+  },
+
+  created() {
+    this.getSingleProject();
+  },
+  computed: {
+    loaded() {
+      return this.singleProject !== null;
+    },
+  },
 };
 </script>
 
